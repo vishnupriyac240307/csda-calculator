@@ -1,0 +1,43 @@
+{
+  "name": "csda-calculator-root",
+  "version": "1.0.0",
+  "description": "CSDA SGPA & CGPA Calculator — Complete Full-Stack Web Application",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:server": "cd server && npm run build",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "test": "npm run test:server && npm run test:client",
+    "start": "cd server && npm start"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "csda",
+    "sgpa",
+    "cgpa",
+    "calculator",
+    "mongodb",
+    "express",
+    "react",
+    "typescript"
+  ],
+  "author": "CSDA Department",
+  "license": "ISC"
+}

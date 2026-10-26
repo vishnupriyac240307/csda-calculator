@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Comprehensive Multi-Page Print Styles for A4 Academic Transcripts & Admin Ledgers */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html,
+  body,
+  #root,
+  main {
+    background: white !important;
+    color: black !important;
+    font-size: 10pt;
+    line-height: 1.3;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    width: 100% !important;
+  }
+
+  .no-print,
+  nav,
+  header,
+  footer,
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Prevent browser overflow clipping across multiple pages */
+  .overflow-hidden,
+  .overflow-x-auto,
+  .overflow-y-auto {
+    overflow: visible !important;
+  }
+
+  .print-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Prevent individual semester tables from breaking awkwardly across page splits */
+  .print-semester-block {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 1.5rem !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 0.5rem !important;
+    overflow: visible !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 4px 6px !important;
+    word-break: break-word !important;
+  }
+
+  /* Default A4 page margin */
+  @page {
+    margin: 0.8cm !important;
+  }
+}
