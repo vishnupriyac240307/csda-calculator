@@ -2,6 +2,10 @@
   "name": "csda-calculator-root",
   "version": "1.0.0",
   "description": "CSDA SGPA & CGPA Calculator — Complete Full-Stack Web Application",
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "cd server && npm run dev",
